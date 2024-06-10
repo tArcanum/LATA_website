@@ -23,16 +23,16 @@ window.onscroll = function() {
         textSpan.style.animation = "title-text-animation-span 1.7s 1s forwards"
     }
 
-    title = document.querySelector('#imgs .animated-title');
-    textTitle = document.querySelector("#imgs .animated-text-title")
-    textSpan = document.querySelector("#imgs .span-animation")
-    if (window.scrollY > 2500) {
+    title = document.querySelector('#trabalhos .animated-title');
+    textTitle = document.querySelector("#trabalhos .animated-text-title")
+    textSpan = document.querySelector("#trabalhos .span-animation")
+    if (window.scrollY > 1300) {
       title.style.animation = "title-animation 2.5s forwards"
         textTitle.style.animation = "title-text-animation 2.5s forwards"
         textSpan.style.animation = "title-text-animation-span 1.7s 1s forwards"
     }
 
-    if (window.scrollY > 2350) {
+    if (window.scrollY > 2650) {
       contact.style.position = "static";
       contact.style.float = "right";
       contact.style.margin = "45px";
@@ -42,7 +42,6 @@ window.onscroll = function() {
       contact.style.position = "fixed";
       contact.style.margin = "0";
     }
-
   };
 
   // Animação das setas
@@ -117,4 +116,14 @@ function carousselSvgControlPrev() {
     slideAtual.style.animation = "carouselAnimationINL 1.5s forwards"
   });
 }
-  
+/**
+// Titulos responsívos
+const viewportWidth = window.innerWidth;
+var title = document.querySelector('.animated-title');
+var textTitle = document.querySelector(".animated-text-title")
+var conatinerTitle = document.querySelector(".container-title")
+conatinerTitle.style.height = `calc(${window.getComputedStyle(title).getPropertyValue('height')} * 2)`;
+textTitle.style.fontSize = `calc(${window.getComputedStyle(title).getPropertyValue('height')}/${viewportWidth}*100)`
+textTitle.style.lineHeight = `calc(${window.getComputedStyle(title).getPropertyValue('height')}/${viewportWidth}*88)`
+console.log(window.getComputedStyle(conatinerTitle).getPropertyValue('height'))
+**/
